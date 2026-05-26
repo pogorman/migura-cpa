@@ -175,10 +175,7 @@ nav {
 
 /* ── SERVICES ── */
 .services-header {
-  padding: 28px 40px 0;
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
+  padding: 32px 40px 14px;
 }
 
 .services-header h2 {
@@ -187,35 +184,34 @@ nav {
   font-weight: 400;
   color: var(--text-muted);
   font-style: italic;
-}
-
-.services-header hr {
-  flex: 1;
-  border: none;
-  border-top: 1px solid var(--border);
-  margin-bottom: 2px;
+  letter-spacing: 0.02em;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--border);
-  margin-top: 16px;
 }
 
 .service-card {
-  padding: 24px 28px;
+  padding: 22px 28px 26px;
+  border-top: 4px solid;
   border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  transition: background 0.15s;
+  background: var(--bg);
+  transition: background 0.15s, transform 0.15s;
 }
 
-.service-card:hover { background: var(--bg-soft); }
+.service-card:hover {
+  background: var(--bg-soft);
+}
 
 .service-card:nth-child(3n) { border-right: none; }
-.service-card:nth-child(4),
-.service-card:nth-child(5),
-.service-card:nth-child(6) { border-bottom: none; }
+
+.service-card:nth-child(1) { border-top-color: #1a3a5c; }
+.service-card:nth-child(2) { border-top-color: #0f6e56; }
+.service-card:nth-child(3) { border-top-color: #534AB7; }
+.service-card:nth-child(4) { border-top-color: #854F0B; }
+.service-card:nth-child(5) { border-top-color: #A32D2D; }
+.service-card:nth-child(6) { border-top-color: #3B6D11; }
 
 .service-img {
   width: 100%;
