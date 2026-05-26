@@ -77,72 +77,73 @@ nav {
 
 .nav-cta svg { width: 13px; height: 13px; }
 
-/* ── PHOTO STRIP ── */
-.photo-strip {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 220px;
-  overflow: hidden;
-}
-
-.photo-strip figure {
-  overflow: hidden;
+/* ── HERO ── */
+.hero {
   position: relative;
+  height: 360px;
+  overflow: hidden;
 }
 
-.photo-strip figure img {
+.hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
 }
 
-.photo-strip figure:hover img { transform: scale(1.04); }
-
-.photo-strip figure:nth-child(2) {
-  border-left: 3px solid #fff;
-  border-right: 3px solid #fff;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(15, 36, 64, 0.78) 0%,
+    rgba(15, 36, 64, 0.50) 55%,
+    rgba(15, 36, 64, 0.20) 100%
+  );
+  display: flex;
+  align-items: center;
+  padding: 0 56px;
 }
 
-/* ── INTRO ── */
-.intro {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: end;
-  gap: 32px;
-  padding: 32px 40px 28px;
-  border-bottom: 1px solid var(--border);
+.hero-text {
+  max-width: 560px;
+  color: #fff;
 }
 
-.intro h1 {
+.hero-text h1 {
   font-family: var(--serif);
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 400;
-  line-height: 1.25;
-  color: var(--navy);
-  margin-bottom: 8px;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 14px;
 }
 
-.intro h1 em {
+.hero-text h1 em {
   font-style: italic;
-  color: var(--accent);
+  color: #a8cfee;
 }
 
-.intro-sub {
-  font-size: 14px;
-  color: var(--text-muted);
+.hero-sub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.88);
   font-weight: 300;
-  max-width: 440px;
+  max-width: 460px;
   line-height: 1.6;
 }
 
-.intro-contact {
-  text-align: right;
-  flex-shrink: 0;
+/* ── CONTACT BAND ── */
+.contact-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 18px 40px;
+  border-bottom: 1px solid var(--border);
 }
 
-.intro-contact .cpa-badge {
+.cpa-badge {
   display: inline-block;
   font-size: 10px;
   font-weight: 500;
@@ -150,25 +151,27 @@ nav {
   text-transform: uppercase;
   color: var(--accent);
   background: var(--navy-light);
-  padding: 3px 9px;
+  padding: 4px 11px;
   border-radius: 100px;
-  margin-bottom: 8px;
 }
 
-.intro-contact p {
-  font-size: 12px;
-  color: var(--text-muted);
-  line-height: 2;
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 13px;
   font-weight: 300;
+  color: var(--text-muted);
 }
 
-.intro-contact a {
+.contact-links a {
   color: var(--navy-mid);
   text-decoration: none;
   font-weight: 400;
 }
 
-.intro-contact a:hover { text-decoration: underline; }
+.contact-links a:hover { text-decoration: underline; }
 
 /* ── SERVICES ── */
 .services-header {
@@ -305,14 +308,23 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 640px) {
   nav { padding: 0 20px; }
-  .photo-strip { height: 160px; }
-  .intro {
-    grid-template-columns: 1fr;
-    padding: 24px 20px 24px;
-    align-items: start;
+  .hero { height: 280px; }
+  .hero-overlay {
+    padding: 0 24px;
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 36, 64, 0.55) 0%,
+      rgba(15, 36, 64, 0.72) 100%
+    );
   }
-  .intro h1 { font-size: 24px; }
-  .intro-contact { text-align: left; }
+  .hero-text h1 { font-size: 26px; }
+  .hero-sub { font-size: 13px; }
+  .contact-band {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+  }
+  .contact-links { gap: 14px; }
   .services-header { padding: 24px 20px 0; }
   .services-grid { grid-template-columns: 1fr; }
   .service-card {
@@ -330,8 +342,8 @@ footer {
 }
 
 nav { animation: fadeUp 0.4s ease both; }
-.photo-strip { animation: fadeUp 0.5s 0.1s ease both; }
-.intro { animation: fadeUp 0.5s 0.2s ease both; }
+.hero { animation: fadeUp 0.5s 0.1s ease both; }
+.contact-band { animation: fadeUp 0.5s 0.2s ease both; }
 .services-header { animation: fadeUp 0.5s 0.3s ease both; }
 .services-grid { animation: fadeUp 0.5s 0.35s ease both; }
 footer { animation: fadeUp 0.5s 0.4s ease both; }
