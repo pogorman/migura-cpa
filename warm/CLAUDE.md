@@ -2,7 +2,7 @@
 
 Preview URL: https://pogorman.github.io/migura-cpa/warm/
 
-One of three design options for client review. Cream background, serif type, horizontal service rows.
+One of three design options for client review. Cream background, serif type, 4-up grid of service cards (italic gold number + thumbnail + title + description).
 
 ## Stack
 - Plain HTML + CSS, no build tool
@@ -21,10 +21,10 @@ git add -A && git commit -m "your message" && git push
 - Do not change any copy without being asked
 - Do not add JavaScript unless explicitly requested
 - Do not introduce a framework or build step
-- Keep exactly 4 service rows
+- Keep exactly 4 service cards
 - Unsplash photo URLs are intentional — do not swap them
 - Cream background: `#f7f4ef` — do not change to white
-- Mobile breakpoint: single column at 640px
+- Breakpoints: 4 cards in a row > 960px, drop to 2-up at 960px, drop to 1-up at 640px
 
 ## When ready for the real domain
 - Custom domain configuration is handled at the main repo level. See `../CLAUDE.md` at the repo root. Note: a single CNAME applies to the entire Pages site, so if a variant gets promoted to the live domain, the chosen variant's files should be promoted to the repo root.
