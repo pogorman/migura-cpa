@@ -55,7 +55,6 @@ You are building and deploying a minimal static website for Migura CPA. This is 
 **Business name**: Migura CPA
 **Location**: New Braunfels, Texas
 **Phone**: (830) 609-9027
-**Email**: info@miguracpa.com
 **Hero headline**: "Taxes. Bookkeeping. Financial planning."
   — "Taxes." is bold and gold, the rest is weight 300 white
 **Sub-copy**: "A full-service CPA practice serving individuals, families, and small businesses across the New Braunfels area."

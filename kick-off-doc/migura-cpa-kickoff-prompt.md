@@ -49,7 +49,6 @@ You are building and deploying a minimal, production-ready static website for Mi
 **Business name**: Migura CPA  
 **Location**: New Braunfels, Texas  
 **Phone**: (830) 609-9027  
-**Email**: info@miguracpa.com  
 **Tagline**: "Taxes and accounting, done right the first time."  
 **Sub-copy**: "A full-service CPA practice serving individuals, families, and small businesses across the New Braunfels area."
 
